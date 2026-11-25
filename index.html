@@ -3,125 +3,133 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xonaru — Coming soon</title>
-<meta name="description" content="Xonaru: mekhela sador, saris and Axomiya gohona reimagined for modern wearers. Launching soon from Singapore.">
+<title>Xonaru — Dainty gold, with a taste of Assam</title>
+<meta name="description" content="Xonaru (say ho-na-ru): dainty gold jewellery for every day in Singapore, with a taste of Assam. Launching soon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M14 22 C42 10 78 10 106 22' stroke='%23A67C1E' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M30 18 L30 44 M45 15 L45 68 M60 14 L60 90 M75 15 L75 68 M90 18 L90 44' stroke='%23A67C1E' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='50' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='45' cy='74' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='60' cy='97' r='8' fill='%23A67C1E'/%3E%3Ccircle cx='75' cy='74' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='90' cy='50' r='7' fill='%23A67C1E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+Bengali:wght@500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-/* VOICE: warm, quiet luxury; heritage without nostalgia
-   IDEA: a hand-woven gamosa edge framing the golden sonaru blossom
-   PICTURE: golden flower chains hanging from a branch, like a necklace of gold beads
-   COLOUR and TYPE: deep lac red, muga gold, ivory; Cormorant Garamond + Jost
-   LAYOUT: one centred composition, woven bands top and bottom, sign-up in one calm column */
-:root{color-scheme:light dark;
-  --bg:light-dark(#6e1219,#3a0a0e);
-  --deep:light-dark(#4f0c12,#260608);
-  --gold:light-dark(#e6b84a,#d9a93c);
-  --gold2:light-dark(#f6d77f,#e9c264);
-  --ink:light-dark(#fbf3e2,#f2e6cc);
-  --soft:light-dark(#efd9b4,#cdb48c)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+/* Follows the Xonaru branding kit: white first, gold as a fine line, ink text,
+   square corners, Cormorant Garamond + Jost, generous space. */
+:root{
+  --white:#FFFFFF;--ivory:#FAF6EC;--line:#E6D7AE;--gold:#C9A24B;
+  --gold-mark:#A67C1E;--gold-text:#8A6516;--ink:#1F1B16;--ink-soft:#4A4238;
+  --display:"Cormorant Garamond",Georgia,serif;--text:"Jost",system-ui,sans-serif;
+  --s2:8px;--s4:16px;--s7:28px;--s12:48px;--s20:80px;
+}
 *{box-sizing:border-box;min-width:0}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Jost",system-ui,sans-serif;overflow-x:clip;display:flex;flex-direction:column}
-.weave{height:22px;background:
-  repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 20px) 0 8px/100% 6px no-repeat,
-  linear-gradient(var(--ink),var(--ink)) 0 0/100% 3px no-repeat,
-  linear-gradient(var(--ink),var(--ink)) 0 100%/100% 3px no-repeat,var(--deep)}
-main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center;max-width:1180px;width:100%;margin:0 auto;padding:clamp(28px,5vw,72px) max(5vw,18px)}
-.fig{position:relative;aspect-ratio:1/1.05;width:100%;max-width:520px;justify-self:center}
-.fig svg{position:absolute;inset:0;width:100%;height:100%}
-.as{font:500 clamp(20px,2.4vw,26px)/1.2 "Noto Serif Bengali",serif;color:var(--gold2);margin:0 0 6px}
-h1{font:600 clamp(52px,8vw,96px)/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;margin:0;color:var(--ink)}
-.lede{font:500 clamp(20px,2.2vw,26px)/1.3 "Cormorant Garamond",Georgia,serif;color:var(--gold2);margin:14px 0 18px;text-wrap:balance}
-p{margin:0 0 16px;max-width:34em;color:var(--soft)}
-ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:8px}
-li{display:flex;gap:12px;align-items:baseline;color:var(--ink)}
-li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-2px)}
-form{display:flex;flex-wrap:wrap;gap:10px;max-width:460px}
-label{position:absolute;left:-9999px}
-input{flex:1 1 220px;height:48px;padding:0 16px;font:16px "Jost",sans-serif;border:1px solid var(--gold);border-radius:999px;background:transparent;color:var(--ink)}
-input::placeholder{color:var(--soft);opacity:.8}
-button{height:48px;padding:0 24px;font:500 16px "Jost",sans-serif;border:0;border-radius:999px;background:var(--gold);color:#3a0a0e;cursor:pointer}
-button:hover{background:var(--gold2)}
-input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
-.note{font-size:14px;margin-top:12px;min-height:1.6em;color:var(--soft)}
-a{color:var(--gold2)}
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:16px max(5vw,18px);font-size:14px;color:var(--soft);background:var(--deep)}
-.sway{transform-origin:top center;animation:sway 6s ease-in-out infinite alternate}
-.sway:nth-of-type(2n){animation-duration:7.5s;animation-delay:-2s}
-@keyframes sway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
-@media (prefers-reduced-motion:reduce){.sway{animation:none}}
-@media (max-width:760px){main{grid-template-columns:minmax(0,1fr);text-align:left}.fig{max-width:340px;order:-1}}
+html{color-scheme:light}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.6 var(--text);overflow-x:clip}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(5vw,20px)}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.wordmark{font:500 24px/1 var(--display);letter-spacing:.32em;color:var(--ink);text-decoration:none;margin-right:-.32em}
+.label{font:400 13px/1.4 var(--text);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text);margin:0}
+.hero{padding:var(--s20) 0}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s12);align-items:center}
+h1{font:400 clamp(44px,6.4vw,76px)/1.02 var(--display);margin:var(--s4) 0 var(--s7);text-wrap:balance}
+.lede{font:300 19px/1.6 var(--text);color:var(--ink-soft);max-width:30em;margin:0 0 var(--s12)}
+.mark{display:flex;justify-content:center;align-items:center;background:var(--ivory);border:1px solid var(--line);aspect-ratio:4/5;padding:var(--s12)}
+.mark svg{width:72%;height:auto}
+form{display:flex;flex-wrap:wrap;gap:var(--s4) 0;max-width:480px}
+label.sr{position:absolute;left:-9999px}
+input{flex:1 1 240px;height:52px;padding:0 var(--s4);font:400 16px var(--text);color:var(--ink);background:var(--white);border:1px solid var(--ink);border-right:0;border-radius:0}
+input::placeholder{color:var(--ink-soft)}
+button{height:52px;padding:0 var(--s7);font:400 15px/1 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:var(--ink);border:1px solid var(--ink);border-radius:0;cursor:pointer}
+button:hover{background:var(--ink-soft)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--gold-mark);outline-offset:3px}
+.note{font-size:15px;color:var(--ink-soft);margin:var(--s4) 0 0;min-height:1.6em}
+.name{background:var(--ivory);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--s20) 0;text-align:center}
+.name h2{font:400 clamp(34px,4.4vw,48px)/1.1 var(--display);margin:var(--s4) 0}
+.name p{max-width:34em;margin:0 auto;color:var(--ink-soft)}
+.motifs{padding:var(--s20) 0}
+.motifs h2{font:400 clamp(34px,4.4vw,48px)/1.1 var(--display);margin:var(--s4) 0 var(--s12)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s7)}
+.card{border-top:1px solid var(--line);padding-top:var(--s7)}
+.card svg{width:56px;height:56px;display:block;margin-bottom:var(--s4)}
+.card h3{font:500 25px/1.2 var(--display);margin:0 0 var(--s2)}
+.card p{margin:0;color:var(--ink-soft);font-size:16px}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s4);padding-top:var(--s7);padding-bottom:var(--s7);font-size:15px;color:var(--ink-soft)}
+footer a{color:var(--gold-text)}
+.m{stroke:var(--gold-mark);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.mark{order:-1;aspect-ratio:auto;padding:var(--s12) var(--s7)}.mark svg{width:46%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){input{border-right:1px solid var(--ink)}button{width:100%}}
 </style>
 </head>
 <body>
-<div class="weave" aria-hidden="true"></div>
+<header><div class="wrap">
+  <a class="wordmark" href="/">XONARU</a>
+  <p class="label">Coming soon</p>
+</div></header>
+
 <main>
-  <div class="fig" aria-hidden="true">
-    <svg viewBox="0 0 400 420" role="img">
-      <defs>
-        <radialGradient id="g" cx=".35" cy=".3" r=".75">
-          <stop offset="0" stop-color="#fff1b8"/><stop offset=".45" stop-color="#f2c54e"/><stop offset="1" stop-color="#b9801a"/>
-        </radialGradient>
-        <g id="f"><circle r="10" fill="url(#g)"/><circle r="3.2" cx="-2" cy="-2" fill="#fff6d6" opacity=".7"/></g>
-        <g id="s"><circle r="6.5" fill="url(#g)"/></g>
-        <g id="leaf"><path d="M0 0 C14 -10 34 -8 46 0 C34 8 14 10 0 0Z" fill="#2f5a2a"/><path d="M2 0 H42" stroke="#4f7d44" stroke-width="1"/></g>
-      </defs>
-      <circle cx="200" cy="215" r="170" style="fill:none;stroke:var(--gold);stroke-opacity:.35;stroke-width:1"/>
-      <circle cx="200" cy="215" r="150" style="fill:var(--deep);opacity:.55"/>
-      <path d="M10 46 C110 20 250 26 392 58" stroke="#5a3a1c" stroke-width="7" fill="none" stroke-linecap="round"/>
-      <use href="#leaf" transform="translate(70 34) rotate(-28)"/><use href="#leaf" transform="translate(150 28) rotate(-150)"/>
-      <use href="#leaf" transform="translate(250 34) rotate(-20)"/><use href="#leaf" transform="translate(330 46) rotate(-160)"/>
-      <g id="chains"></g>
-    </svg>
-  </div>
-  <section>
-    <p class="as" lang="as">সোণাৰু</p>
-    <h1>XONARU</h1>
-    <p class="lede">Assamese heritage, made for the way you dress today.</p>
-    <p>Mekhela sador, saris and traditional Axomiya gohona redesigned for modern wearers. Launching soon from Singapore.</p>
-    <ul>
-      <li>Mekhela sador and saris</li>
-      <li>Axomiya gohona, reimagined</li>
-      <li>Cloth jewellery</li>
-    </ul>
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="label">Fine jewellery for every day</p>
+    <h1>Dainty gold, with a taste of Assam.</h1>
+    <p class="lede">Light, fine pieces made for daily wear in Singapore. Our first collection is almost ready. Leave your email and we will tell you first.</p>
     <form id="join" novalidate>
-      <label for="em">Your email</label>
+      <label class="sr" for="em">Your email</label>
       <input id="em" type="email" placeholder="Your email address" autocomplete="email" required>
       <button type="submit">Notify me</button>
     </form>
-    <div class="note" id="note" role="status">Be the first to see the collection.</div>
-  </section>
+    <p class="note" id="note" role="status"></p>
+  </div>
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none">
+      <path d="M14 22 C42 10 78 10 106 22" stroke="#A67C1E" stroke-width="3" stroke-linecap="round"/>
+      <path d="M30 18 L30 44 M45 15 L45 68 M60 14 L60 90 M75 15 L75 68 M90 18 L90 44" stroke="#A67C1E" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="30" cy="50" r="6" fill="#A67C1E"/><circle cx="45" cy="74" r="6" fill="#A67C1E"/><circle cx="60" cy="97" r="7" fill="#A67C1E"/><circle cx="75" cy="74" r="6" fill="#A67C1E"/><circle cx="90" cy="50" r="6" fill="#A67C1E"/>
+    </svg>
+  </div>
+</div></section>
+
+<section class="name"><div class="wrap">
+  <p class="label">The name</p>
+  <h2>Xonaru. Say ho-na-ru.</h2>
+  <p>Xonaru is the Assamese name for the golden shower tree, which hangs chains of yellow blossom across Assam each spring.</p>
+</div></section>
+
+<section class="motifs"><div class="wrap">
+  <p class="label">Drawn from Assam</p>
+  <h2>Four quiet motifs</h2>
+  <div class="grid">
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M30 8 A16 16 0 1 0 30 40 A12.5 12.5 0 1 1 30 8 Z"/></svg>
+      <h3>Jon</h3><p>The moon. A fine open crescent, worn in Assam for generations.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M6 10 C18 5 30 5 42 10 M14 9 V24 M24 7 V34 M34 9 V24"/><circle cx="14" cy="27" r="2.5" class="m"/><circle cx="24" cy="37" r="2.5" class="m"/><circle cx="34" cy="27" r="2.5" class="m"/></svg>
+      <h3>Xonaru</h3><p>The blossom. Hanging lines that end in small discs.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M4 20 C12 12 20 28 28 20 S40 12 44 16 M4 30 C12 22 20 38 28 30 S40 22 44 26"/></svg>
+      <h3>Luit</h3><p>The river. One flowing curve, named after the Brahmaputra.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M24 6 C37 14 37 33 24 42 C11 33 11 14 24 6 Z M24 9 V40"/></svg>
+      <h3>Tea leaf</h3><p>A single leaf, for the tea gardens of Assam.</p>
+    </div>
+  </div>
+</div></section>
 </main>
-<footer>
+
+<footer><div class="wrap">
   <span>© 2026 Xonaru · Singapore</span>
-  <span><a href="mailto:hello@xonaru.com">hello@xonaru.com</a></span>
-</footer>
-<div class="weave" aria-hidden="true"></div>
+  <span><a href="mailto:hello@xonaru.com">hello@xonaru.com</a> · <a href="https://instagram.com/xonaru.official">Instagram</a></span>
+</div></footer>
+
 <script>
 {
-  const chains=[[60,44,9],[118,34,11],[178,31,12],[236,34,11],[296,41,10],[350,51,8]];
-  const out=chains.map(([x,y,n])=>{
-    let h=`<g class="sway" style="transform-box:fill-box"><path d="M${x} ${y} V${y+16}" stroke="#5a3a1c" stroke-width="2"/>`;
-    for(let i=0;i<n;i++){
-      const cy=y+26+i*24, dx=Math.sin(i*1.3)*4, big=i<n-2;
-      h+=`<use href="#${big?'f':'s'}" x="${x+dx}" y="${cy}"/>`;
-      if(big&&i%2===0) h+=`<use href="#s" x="${x+dx+(i%4?-12:12)}" y="${cy+8}"/>`;
-    }
-    return h+'</g>';
-  }).join('');
-  document.getElementById('chains').innerHTML=out;
-
   const form=document.getElementById('join'),em=document.getElementById('em'),note=document.getElementById('note');
   form.addEventListener('submit',e=>{
     e.preventDefault();
     const v=em.value.trim();
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){note.textContent='Please enter a valid email address.';em.focus();return;}
-    const body=encodeURIComponent('Please add me to the Xonaru launch list: '+v);
-    location.href='mailto:hello@xonaru.com?subject='+encodeURIComponent('Notify me: Xonaru launch')+'&body='+body;
-    note.textContent='Your email app should open with a message ready. Just press send. Or write to hello@xonaru.com.';
+    location.href='mailto:hello@xonaru.com?subject='+encodeURIComponent('Notify me: Xonaru launch')+'&body='+encodeURIComponent('Please add me to the Xonaru launch list: '+v);
+    note.textContent='Your email app should open with a message ready. Press send, or write to hello@xonaru.com.';
   });
 }
 </script>

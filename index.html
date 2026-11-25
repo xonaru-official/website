@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xonaru — Coming soon</title>
+<meta name="description" content="Xonaru: mekhela sador, saris and Axomiya gohona reimagined for modern wearers. Launching soon from Singapore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+Bengali:wght@500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, quiet luxury; heritage without nostalgia
+   IDEA: a hand-woven gamosa edge framing the golden sonaru blossom
+   PICTURE: golden flower chains hanging from a branch, like a necklace of gold beads
+   COLOUR and TYPE: deep lac red, muga gold, ivory; Cormorant Garamond + Jost
+   LAYOUT: one centred composition, woven bands top and bottom, sign-up in one calm column */
+:root{color-scheme:light dark;
+  --bg:light-dark(#6e1219,#3a0a0e);
+  --deep:light-dark(#4f0c12,#260608);
+  --gold:light-dark(#e6b84a,#d9a93c);
+  --gold2:light-dark(#f6d77f,#e9c264);
+  --ink:light-dark(#fbf3e2,#f2e6cc);
+  --soft:light-dark(#efd9b4,#cdb48c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Jost",system-ui,sans-serif;overflow-x:clip;display:flex;flex-direction:column}
+.weave{height:22px;background:
+  repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 20px) 0 8px/100% 6px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) 0 0/100% 3px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) 0 100%/100% 3px no-repeat,var(--deep)}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center;max-width:1180px;width:100%;margin:0 auto;padding:clamp(28px,5vw,72px) max(5vw,18px)}
+.fig{position:relative;aspect-ratio:1/1.05;width:100%;max-width:520px;justify-self:center}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.as{font:500 clamp(20px,2.4vw,26px)/1.2 "Noto Serif Bengali",serif;color:var(--gold2);margin:0 0 6px}
+h1{font:600 clamp(52px,8vw,96px)/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;margin:0;color:var(--ink)}
+.lede{font:500 clamp(20px,2.2vw,26px)/1.3 "Cormorant Garamond",Georgia,serif;color:var(--gold2);margin:14px 0 18px;text-wrap:balance}
+p{margin:0 0 16px;max-width:34em;color:var(--soft)}
+ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:8px}
+li{display:flex;gap:12px;align-items:baseline;color:var(--ink)}
+li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-2px)}
+form{display:flex;flex-wrap:wrap;gap:10px;max-width:460px}
+label{position:absolute;left:-9999px}
+input{flex:1 1 220px;height:48px;padding:0 16px;font:16px "Jost",sans-serif;border:1px solid var(--gold);border-radius:999px;background:transparent;color:var(--ink)}
+input::placeholder{color:var(--soft);opacity:.8}
+button{height:48px;padding:0 24px;font:500 16px "Jost",sans-serif;border:0;border-radius:999px;background:var(--gold);color:#3a0a0e;cursor:pointer}
+button:hover{background:var(--gold2)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.note{font-size:14px;margin-top:12px;min-height:1.6em;color:var(--soft)}
+a{color:var(--gold2)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:16px max(5vw,18px);font-size:14px;color:var(--soft);background:var(--deep)}
+.sway{transform-origin:top center;animation:sway 6s ease-in-out infinite alternate}
+.sway:nth-of-type(2n){animation-duration:7.5s;animation-delay:-2s}
+@keyframes sway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
+@media (prefers-reduced-motion:reduce){.sway{animation:none}}
+@media (max-width:760px){main{grid-template-columns:minmax(0,1fr);text-align:left}.fig{max-width:340px;order:-1}}
+</style>
+</head>
+<body>
+<div class="weave" aria-hidden="true"></div>
+<main>
+  <div class="fig" aria-hidden="true">
+    <svg viewBox="0 0 400 420" role="img">
+      <defs>
+        <radialGradient id="g" cx=".35" cy=".3" r=".75">
+          <stop offset="0" stop-color="#fff1b8"/><stop offset=".45" stop-color="#f2c54e"/><stop offset="1" stop-color="#b9801a"/>
+        </radialGradient>
+        <g id="f"><circle r="10" fill="url(#g)"/><circle r="3.2" cx="-2" cy="-2" fill="#fff6d6" opacity=".7"/></g>
+        <g id="s"><circle r="6.5" fill="url(#g)"/></g>
+        <g id="leaf"><path d="M0 0 C14 -10 34 -8 46 0 C34 8 14 10 0 0Z" fill="#2f5a2a"/><path d="M2 0 H42" stroke="#4f7d44" stroke-width="1"/></g>
+      </defs>
+      <circle cx="200" cy="215" r="170" style="fill:none;stroke:var(--gold);stroke-opacity:.35;stroke-width:1"/>
+      <circle cx="200" cy="215" r="150" style="fill:var(--deep);opacity:.55"/>
+      <path d="M10 46 C110 20 250 26 392 58" stroke="#5a3a1c" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <use href="#leaf" transform="translate(70 34) rotate(-28)"/><use href="#leaf" transform="translate(150 28) rotate(-150)"/>
+      <use href="#leaf" transform="translate(250 34) rotate(-20)"/><use href="#leaf" transform="translate(330 46) rotate(-160)"/>
+      <g id="chains"></g>
+    </svg>
+  </div>
+  <section>
+    <p class="as" lang="as">সোণাৰু</p>
+    <h1>XONARU</h1>
+    <p class="lede">Assamese heritage, made for the way you dress today.</p>
+    <p>Mekhela sador, saris and traditional Axomiya gohona redesigned for modern wearers. Launching soon from Singapore.</p>
+    <ul>
+      <li>Mekhela sador and saris</li>
+      <li>Axomiya gohona, reimagined</li>
+      <li>Cloth jewellery</li>
+    </ul>
+    <form id="join" novalidate>
+      <label for="em">Your email</label>
+      <input id="em" type="email" placeholder="Your email address" autocomplete="email" required>
+      <button type="submit">Notify me</button>
+    </form>
+    <div class="note" id="note" role="status">Be the first to see the collection.</div>
+  </section>
+</main>
+<footer>
+  <span>© 2026 Xonaru · Singapore</span>
+  <span><a href="mailto:hello@xonaru.com">hello@xonaru.com</a></span>
+</footer>
+<div class="weave" aria-hidden="true"></div>
+<script>
+{
+  const chains=[[60,44,9],[118,34,11],[178,31,12],[236,34,11],[296,41,10],[350,51,8]];
+  const out=chains.map(([x,y,n])=>{
+    let h=`<g class="sway" style="transform-box:fill-box"><path d="M${x} ${y} V${y+16}" stroke="#5a3a1c" stroke-width="2"/>`;
+    for(let i=0;i<n;i++){
+      const cy=y+26+i*24, dx=Math.sin(i*1.3)*4, big=i<n-2;
+      h+=`<use href="#${big?'f':'s'}" x="${x+dx}" y="${cy}"/>`;
+      if(big&&i%2===0) h+=`<use href="#s" x="${x+dx+(i%4?-12:12)}" y="${cy+8}"/>`;
+    }
+    return h+'</g>';
+  }).join('');
+  document.getElementById('chains').innerHTML=out;
+
+  const form=document.getElementById('join'),em=document.getElementById('em'),note=document.getElementById('note');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=em.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){note.textContent='Please enter a valid email address.';em.focus();return;}
+    const body=encodeURIComponent('Please add me to the Xonaru launch list: '+v);
+    location.href='mailto:hello@xonaru.com?subject='+encodeURIComponent('Notify me: Xonaru launch')+'&body='+body;
+    note.textContent='Your email app should open with a message ready. Just press send. Or write to hello@xonaru.com.';
+  });
+}
+</script>
+</body>
+</html>

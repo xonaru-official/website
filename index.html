@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M14 22 C42 10 78 10 106 22' stroke='%23A67C1E' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M30 18 L30 44 M45 15 L45 68 M60 14 L60 90 M75 15 L75 68 M90 18 L90 44' stroke='%23A67C1E' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='50' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='45' cy='74' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='60' cy='97' r='8' fill='%23A67C1E'/%3E%3Ccircle cx='75' cy='74' r='7' fill='%23A67C1E'/%3E%3Ccircle cx='90' cy='50' r='7' fill='%23A67C1E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400&family=Noto+Serif+Bengali:wght@400&display=swap" rel="stylesheet">
 <style>
 /* Follows the Xonaru branding kit: white first, gold as a fine line, ink text,
    square corners, Cormorant Garamond + Jost, generous space. */
@@ -50,6 +50,8 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(-
 .card svg{width:56px;height:56px;display:block;margin-bottom:var(--s4)}
 .card h3{font:500 25px/1.2 var(--display);margin:0 0 var(--s2)}
 .card p{margin:0;color:var(--ink-soft);font-size:16px}
+.card .as{font:400 15px/1 "Noto Serif Bengali",serif;color:var(--gold-text);margin-left:6px}
+.grid{row-gap:var(--s12)}
 footer{border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s4);padding-top:var(--s7);padding-bottom:var(--s7);font-size:15px;color:var(--ink-soft)}
 footer a{color:var(--gold-text)}
@@ -94,23 +96,35 @@ footer a{color:var(--gold-text)}
 
 <section class="motifs"><div class="wrap">
   <p class="label">Drawn from Assam</p>
-  <h2>Four quiet motifs</h2>
+  <h2>Seven first collections</h2>
   <div class="grid">
     <div class="card">
+      <svg viewBox="0 0 48 48"><circle class="m" cx="24" cy="24" r="3.5"/><circle class="m" cx="24" cy="12.5" r="6"/><circle class="m" cx="34.9" cy="20.4" r="6"/><circle class="m" cx="30.7" cy="33.3" r="6"/><circle class="m" cx="17.3" cy="33.3" r="6"/><circle class="m" cx="13.1" cy="20.4" r="6"/></svg>
+      <h3>Kopou <span class="as" lang="as">কপৌ</span></h3><p>The foxtail orchid, Assam's state flower, as a tiny gold bloom.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M8 30 C8 18 18 12 26 14 C30 10 36 11 38 15 L42 17 L38 19 C38 30 28 37 16 36 L8 40 Z"/><circle cx="33" cy="15.5" r="1.3" fill="#A67C1E"/></svg>
+      <h3>Bhatou <span class="as" lang="as">ভাটৌ</span></h3><p>Two little parrots, turned to face each other.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path class="m" d="M24 8 L42 30 C34 33 14 33 6 30 Z M24 8 V12 M15 30 V40 M24 32 V42 M33 30 V40"/></svg>
+      <h3>Jaapi <span class="as" lang="as">জাপি</span></h3><p>The shape of Assam's palm-leaf hat, made small enough to wear.</p>
+    </div>
+    <div class="card">
       <svg viewBox="0 0 48 48"><path class="m" d="M30 8 A16 16 0 1 0 30 40 A12.5 12.5 0 1 1 30 8 Z"/></svg>
-      <h3>Jon</h3><p>The moon. A fine open crescent, worn in Assam for generations.</p>
+      <h3>Jon <span class="as" lang="as">জোন</span></h3><p>The moon. A fine crescent with tiny engraved details.</p>
     </div>
     <div class="card">
-      <svg viewBox="0 0 48 48"><path class="m" d="M6 10 C18 5 30 5 42 10 M14 9 V24 M24 7 V34 M34 9 V24"/><circle cx="14" cy="27" r="2.5" class="m"/><circle cx="24" cy="37" r="2.5" class="m"/><circle cx="34" cy="27" r="2.5" class="m"/></svg>
-      <h3>Xonaru</h3><p>The blossom. Hanging lines that end in small discs.</p>
+      <svg viewBox="0 0 48 48"><path class="m" d="M6 8 C18 5 30 5 42 8 M14 7 V18 M24 6 V28 M34 7 V18 M14 20 C11.5 24 11.5 27 14 27 C16.5 27 16.5 24 14 20 Z M24 30 C21 35 21 39 24 39 C27 39 27 35 24 30 Z M34 20 C31.5 24 31.5 27 34 27 C36.5 27 36.5 24 34 20 Z"/></svg>
+      <h3>Boroxun <span class="as" lang="as">বৰষুণ</span></h3><p>Rain. Small drops that fall from a fine chain.</p>
     </div>
     <div class="card">
-      <svg viewBox="0 0 48 48"><path class="m" d="M4 20 C12 12 20 28 28 20 S40 12 44 16 M4 30 C12 22 20 38 28 30 S40 22 44 26"/></svg>
-      <h3>Luit</h3><p>The river. One flowing curve, named after the Brahmaputra.</p>
+      <svg viewBox="0 0 48 48"><path class="m" d="M4 24 H44"/><circle class="m" cx="12" cy="24" r="3.5"/><circle class="m" cx="24" cy="24" r="3.5"/><circle class="m" cx="36" cy="24" r="3.5"/></svg>
+      <h3>Phutuki <span class="as" lang="as">ফুটুকী</span></h3><p>Dots. Small spots of colour, spaced along fine gold.</p>
     </div>
     <div class="card">
-      <svg viewBox="0 0 48 48"><path class="m" d="M24 6 C37 14 37 33 24 42 C11 33 11 14 24 6 Z M24 9 V40"/></svg>
-      <h3>Tea leaf</h3><p>A single leaf, for the tea gardens of Assam.</p>
+      <svg viewBox="0 0 48 48"><path class="m" d="M24 6 V12 M8 18 C12 32 36 32 40 18 M12 26 V32 M18 29.5 V36 M24 30.5 V38 M30 29.5 V36 M36 26 V32"/><circle class="m" cx="24" cy="15" r="3"/></svg>
+      <h3>Xunali <span class="as" lang="as">সোণালী</span></h3><p>Golden. Small crescents with a fringe of gold beads, inspired by the jonbiri.</p>
     </div>
   </div>
 </div></section>
